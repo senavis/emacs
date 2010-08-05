@@ -1,3 +1,4 @@
+
 (defun site-python-shift (n)
   (save-excursion
     (indent-rigidly (line-beginning-position)
@@ -11,4 +12,4 @@
   (auto-indent-hook)
   (set-kbd-keys
     ("<tab>" . site-python-shift-right)
-    ("<backtab>" . site-python-shift-left)))
+    ("<backtab>" . site-python-shift-)))

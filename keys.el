@@ -31,7 +31,7 @@
   ("C-$"         . quick-calc)
   ("C-S-b"       . switch-to-buffer-other-window)
   ("C-l"         . recenter-no-erase)
-  ("C-S-c"       . compile)
+  ("C-c C-c"     . compile)
   ("C-`"         . next-error)
 
   ("C-+" . increment-word)

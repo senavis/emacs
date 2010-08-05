@@ -20,11 +20,14 @@
 (load-library "site-yasnippet")
 (load-library "site-rst")
 (load-library "site-io")
-(load-library "site-python")
+(load-library "python-mode")
 (load-library "site-cpp")
 (load-library "site-lisp")
 (load-library "site-compilation")
 (load-library "site-org")
+(load-library "runfile")
+(load-library "compile")
+
 (require 'haml-mode)
 (require 'paredit)
 (require 'no-word)
@@ -38,6 +41,9 @@
 (autoload 'd-mode "d-mode" "Major mode for editing D code." t)
 (require 'vbnet-mode)
 
+;;display time
+(display-time)
+
 (add-to-list 'auto-mode-alist '("\\.d[i]?\\'" . d-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.rb\\'" . ruby-mode))
@@ -46,3 +52,6 @@
 (add-to-list 'auto-mode-alist '("\\.vb$" . vbnet-mode))
 
 (setq auto-mode-alist (append '() auto-mode-alist))
+
+(global-set-key (kbd "<f7>") 'run-current-file)
+(global-set-key (kbd "<f9>") 'my-compile)
